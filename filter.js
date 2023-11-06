@@ -1,8 +1,8 @@
 function filterSelection(val) {
-  var cards = document.getElementsByClassName("filter");
+  var cards = document.getElementsByClassName("card");
   if (val === "all") {
     for (var c of cards) {
-      c.style.display = "flex";
+      c.style.display = "inline";
     }
   } else {
     var box = document.getElementById(val);
@@ -16,7 +16,7 @@ function filterSelection(val) {
       }
     } else {
       for (var c of cards) {
-        c.style.display = "flex";
+        c.style.display = "inline";
       }
     }
   }

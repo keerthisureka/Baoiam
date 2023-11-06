@@ -1,0 +1,182 @@
+body { 
+    font-family: 'Roboto', sans-serif;
+    color: rgb(90, 88, 88);
+    background-color: rgb(245, 245, 245);
+}
+
+#nav-bar {
+    display: flex;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    height: 40px;
+    border-bottom: 0.5px solid gray;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+
+#nav-bar-left {
+    display: flex;
+    gap: 1%;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+#logo {
+    height: 18px;
+    margin-right: 10px;
+}
+.nav-btn {
+    background-color: #0056D2;
+    color: white;
+    height: 40px;
+    text-decoration: none;
+}
+.explore {
+    border-radius: 8px;
+    width: 20%;
+}
+.arrow{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-bottom: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.explore:hover {
+    background-color: white;
+    color: #0056D2;
+}
+.explore:hover .arrow {
+    border: solid #0056D2;
+    border-width: 0 2px 2px 0;
+}
+#search-bar {
+    width: 100%;
+}
+#search-bar > input{
+    height: 40px;
+    width: 80%;
+}
+
+
+#nav-bar-right {
+    display: flex;
+    gap: 3%;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    font-size: small;
+}
+.nav-btn-right {
+    border: none;
+    background-color: white;
+    height: 50px;
+}
+.nav-btn-right:hover {
+    background-color: #e9f1fb;
+}
+.arrow-black {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+}
+.find-career {
+    color: black; 
+    text-decoration: none;
+}
+.login {
+    color: #0056D2;
+    text-decoration: none;
+}
+.find-career:hover, .login:hover {
+    text-decoration: underline;
+}
+#nav-bar-right li{
+    list-style: none;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1.55fr 4fr;
+}
+.check.active {
+    background-color: #666;
+    color: white;
+}
+input.check{
+    transform : scale(2);
+    margin-bottom: 10pt;
+}
+.courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2%;
+    margin-right: 7%;
+}
+.card {
+    height: 430px;
+    border: 1px solid rgb(195, 195, 175);
+    border-radius: 15px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+    background-color: white;
+    position: relative;
+}
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    transition: all 0.3s ease;
+}
+.course-img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.course-logo {
+    border: 0.75px solid rgb(195, 195, 175);
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+.card-content {
+    padding: 5px;
+}
+.card-desc {
+    font-size: small;
+}
+.card-bottom {
+    font-size: small;
+    position: absolute;
+    bottom: 4%;
+}
+
+.filters {
+    padding-left: 15%;
+}
+
+
+@media (max-width: 1060px) {
+    #nav-bar-left  {
+        display: none;
+        display: flex;
+        content: url("./icons/list.svg");
+        width: 4%;
+        padding-left: 0px;
+    }
+    #nav-bar-right {
+        display: none;
+        display: flex;
+        content: url("./icons/coursera.png");
+        height: 16px;
+        width: 110px;
+        margin-left: 35%;
+    }
+}
