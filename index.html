@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera</title>
+
+    <link href="./style.css" rel="stylesheet"></link>
+    <script type="text/javascript" src="filter.js"></script>
+</head>
+
+
+<body>
+    <!-- Navigation Bar -->
+    <nav id="nav-bar">
+        <div id="nav-bar-left">
+            <a href="#"><img id="logo" src="./icons/coursera.png" alt="coursera logo" /></a>
+            <button class="nav-btn explore"><strong>Explore&nbsp;&nbsp;</strong><i class="arrow"></i></button>
+            <div id="search-bar">
+                <input type="search" placeholder="What do you want to learn?" />
+                <button class="nav-btn"><img src="./icons/search.svg" alt="search icon"/></button>
+            </div>
+        </div>
+
+        <ul id="nav-bar-right">
+            <li><button class="nav-btn-right">Online Degrees&nbsp;&nbsp;<i class="arrow arrow-black"></i></button></li>
+            <li><a class="find-career" href="#">Find your New Career</a></li>
+            <li><a class="login" href="#">Log In</a></li>
+            <li><a href="#"><button class="nav-btn" style="border-radius: 8px; border: none;"><strong>Join for Free</strong></button></a></li>
+        </ul>
+    </nav>
+    <div id="search-bar-small-screen">
+      <button class="nav-btn"><img src="./icons/search.svg" alt="search icon"/></button>
+      <input type="search" placeholder="What do you want to learn?" />
+    </div>
+
+
+    <div class="container">
+        <!-- Filters -->
+        <div class="filters">
+            <h3 style="margin-bottom: 30px;"><b>Filter By</b></h3>
+            <input type="checkbox" name="web-dev" value="all" class="check" id="all" onclick="filterSelection(this.value)">&nbsp;&nbsp;&nbsp;Show All<br />
+            <input type="checkbox" name="web-dev" value="data-sci" class="check" id="data-sci" onclick="filterSelection(this.value)">&nbsp;&nbsp;&nbsp;Data Science<br />
+            <input type="checkbox" name="web-dev" value="web-dev" class="check" id="web-dev" onclick="filterSelection(this.value)">&nbsp;&nbsp;&nbsp;Web Development<br />
+            <input type="checkbox" name="web-dev" value="aiml" class="check" id="aiml" onclick="filterSelection(this.value)">&nbsp;&nbsp;&nbsp;AI & Machine Learning<br />
+        </div>
+        <button class="filter-btn"><b>Filters</b><img height="20px" src="./icons/filter-left.svg" /></button>
+
+        <!-- Course Cards -->
+        <div class="courses">
+            <!-- 1st row -->
+            <div class="card web-dev">
+                <div class="image"><img class="course-img" src="./course-imgs/ibm-web-dev.png" alt="IBM Web Development"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/ibm-logo.png" alt="IBM logo" height="30px">&nbsp;IBM</div>
+                  <strong>IBM Full Stack Software Developer</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">Cloud Computing, Python Programming, Cloud Applications, IBM Cloud, Application Development, Computer Programming, Cloud Infrastructure, DevOps, Web Development, Cloud Management, Cloud Platforms, Javascript, Software Architecture, Cloud API, Cloud Storage, Cloud-Based Integration, Full-Stack Web Development, Software Engineering, Continuous Delivery, Continuous Integration, Docker (Software), Software As A Service, Microarchitecture, Django (Web Framework), Database Application, Databases, Kubernetes, Other Cloud Platforms and Tools, SQL, Software Engineering Tools, Data Management, NoSQL, Collaboration, Computer Science, Data Analysis, Leadership and Management, Mergers &amp; Acquisitions, React (web framework)</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.6 </b>(40.8k reviews)</div>
+                    <div style="display: flex; align-items: center;"><img src="./icons/credit.jpg" height="30px" alt="credit">Credit Eligible</div>
+                    <div>Beginner &#xb7; Professional Certificate &#xb7; 3-6 Months</div>
+                  </div>
+                </div>
+            </div>
+            <div class="card web-dev">
+                <div class="image"><img class="course-img" src="./course-imgs/meta-web-dev.png" alt="Meta Web Development"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/meta-logo.png" alt="Meta logo" height="30px">&nbsp;Meta</div>
+                  <strong>Meta Front-End Developer</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">HTML and CSS, Javascript, Front-End Web Development, React (web framework), Web Development, User Experience, Algorithms, Computer Science, Web Design, Application Development, Computer Programming, Software Engineering, Web Development Tools, Collaboration, Communication, Data Structures, Human Computer Interaction, Interactive Design, Linux, Problem Solving, Product Design, Software Engineering Tools, Software Testing</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.7 </b>(14.2k reviews)</div>
+                    <div>Beginner &#xb7; Professional Certificate &#xb7; 3-6 Months</div>
+                  </div>
+                </div>
+            </div>
+            <div class="card aiml">
+                <div class="image"><img class="course-img" src="./course-imgs/google-aiml.png" alt="Google Cloud AI"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/google-logo.jpg" alt="Google Cloud logo" height="30px">&nbsp;Google Cloud</div>
+                  <strong>Introduction to Generative AI</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">CArtificial Neural Networks, Deep Learning, Machine Learning</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.6 </b>(1.8k reviews)</div>
+                    <div>Beginner &#xb7; Course &#xb7; 1-4 Weeks</div>
+                  </div>
+                </div>
+            </div>
+            <!-- 2nd row -->
+            <div class="card data-sci">
+                <div class="image"><img class="course-img" src="./course-imgs/ibm-data-sci.png" alt="IBM Data Science"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/ibm-logo.png" alt="IBM logo" height="30px">&nbsp;IBM</div>
+                  <strong>IBM Data Science</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">Python Programming, Data Science, Machine Learning, Data Analysis, Data Visualization, Statistical Programming, Statistical Visualization, Algorithms, Data Management, Database Design, Human Learning, Plot (Graphics), R Programming, Computational Thinking, Computer Programming, Data Mining, Database Administration, Database Application, Databases, Deep Learning, Exploratory Data Analysis, Machine Learning Algorithms, SQL, Data Model, Statistical Machine Learning, General Statistics, Probability &amp; Statistics, Regression, Reinforcement Learning, Big Data, Cloud Computing, IBM Cloud, Writing</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.6 </b>(118k reviews)</div>
+                    <div style="display: flex; align-items: center;"><img src="./icons/credit.jpg" height="30px" alt="credit">Credit Eligible</div>
+                    <div>Beginner &#xb7; Professional Certificate &#xb7; 3-6 Months</div>
+                  </div>
+                </div>
+            </div>
+            <div class="card web-dev">
+                <div class="image"><img class="course-img" src="./course-imgs/johns-web-dev.png" alt="John Hopkins University Web Development"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/jhu-logo.png" alt="John Hopkins University logo" height="30px">&nbsp;John Hopkins University</div>
+                  <strong>HTML, CSS & Javascript for Web Developers</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">Front-End Web Development, HTML and CSS, Javascript, Web Development</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.7 </b>(15.8k reviews)</div>
+                    <div>Mixed &#xb7; Course &#xb7; 1-3 Months</div>
+                  </div>
+                </div>
+            </div>
+            <div class="card aiml">
+                <div class="image"><img class="course-img" src="./course-imgs/ibm-applied-ai.png" alt="IBM Applied AI"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/ibm-logo.png" alt="IBM logo" height="30px">&nbsp;IBM</div>
+                  <strong>IBM Applied AI</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">Machine Learning, Deep Learning, Machine Learning Algorithms, Artificial Neural Networks, Computer Vision, Python Programming, Applied Machine Learning, Human Learning, Cloud Computing, IBM Cloud, Machine Learning Software, Natural Language Processing, Human Computer Interaction, Algorithms, Computer Programming, Application Development, Cloud API, Computer Programming Tools, Visualization (Computer Graphics), Cloud Applications, Data Analysis, Critical Thinking, Software As A Service, Cloud-Based Integration, Data Science</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.6 </b>(46.7k reviews)</div>
+                    <div style="display: flex; align-items: center;"><img src="./icons/credit.jpg" height="30px" alt="credit">Credit Eligible</div>
+                    <div>Beginner &#xb7; Professional Certificate</div>
+                  </div>
+                </div>
+            </div>
+            <!-- 3rd row -->
+            <div class="card web-dev">
+                <div class="image"><img class="course-img" src="./course-imgs/ibm-web-dev.png" alt="IBM Web Development"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/ibm-logo.png" alt="IBM logo" height="30px">&nbsp;IBM</div>
+                  <strong>IBM Full Stack Software Developer</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">Cloud Computing, Python Programming, Cloud Applications, IBM Cloud, Application Development, Computer Programming, Cloud Infrastructure, DevOps, Web Development, Cloud Management, Cloud Platforms, Javascript, Software Architecture, Cloud API, Cloud Storage, Cloud-Based Integration, Full-Stack Web Development, Software Engineering, Continuous Delivery, Continuous Integration, Docker (Software), Software As A Service, Microarchitecture, Django (Web Framework), Database Application, Databases, Kubernetes, Other Cloud Platforms and Tools, SQL, Software Engineering Tools, Data Management, NoSQL, Collaboration, Computer Science, Data Analysis, Leadership and Management, Mergers &amp; Acquisitions, React (web framework)</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.6 </b>(40.7k reviews)</div>
+                    <div style="display: flex; align-items: center;"><img src="./icons/credit.jpg" height="30px" alt="credit">Credit Eligible</div>
+                    <div>Beginner &#xb7; Professional Certificate &#xb7; 3-6 Months</div>
+                  </div>
+                </div>
+            </div>
+            <div class="card web-dev">
+                <div class="image"><img class="course-img" src="./course-imgs/meta-web-dev.png" alt="Meta Web Development"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/meta-logo.png" alt="Meta logo" height="30px">&nbsp;Meta</div>
+                  <strong>Meta Front-End Developer</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">HTML and CSS, Javascript, Front-End Web Development, React (web framework), Web Development, User Experience, Algorithms, Computer Science, Web Design, Application Development, Computer Programming, Software Engineering, Web Development Tools, Collaboration, Communication, Data Structures, Human Computer Interaction, Interactive Design, Linux, Problem Solving, Product Design, Software Engineering Tools, Software Testing</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.7 </b>(14.1k reviews)</div>
+                    <div>Beginner &#xb7; Professional Certificate &#xb7; 3-6 Months</div>
+                  </div>
+                </div>
+            </div>
+            <div class="card aiml">
+                <div class="image"><img class="course-img" src="./course-imgs/google-aiml.png" alt="Google Cloud AI"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/google-logo.jpg" alt="Google Cloud logo" height="30px">&nbsp;Google Cloud</div>
+                  <strong>Introduction to Generative AI</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">CArtificial Neural Networks, Deep Learning, Machine Learning</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.6 </b>(1.8k reviews)</div>
+                    <div>Beginner &#xb7; Course &#xb7; 1-4 Weeks</div>
+                  </div>
+                </div>
+            </div>
+            <!-- 4th row -->
+            <div class="card data-sci">
+                <div class="image"><img class="course-img" src="./course-imgs/ibm-data-sci.png" alt="IBM Data Science"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/ibm-logo.png" alt="IBM logo" height="30px">&nbsp;IBM</div>
+                  <strong>IBM Data Science</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">Python Programming, Data Science, Machine Learning, Data Analysis, Data Visualization, Statistical Programming, Statistical Visualization, Algorithms, Data Management, Database Design, Human Learning, Plot (Graphics), R Programming, Computational Thinking, Computer Programming, Data Mining, Database Administration, Database Application, Databases, Deep Learning, Exploratory Data Analysis, Machine Learning Algorithms, SQL, Data Model, Statistical Machine Learning, General Statistics, Probability &amp; Statistics, Regression, Reinforcement Learning, Big Data, Cloud Computing, IBM Cloud, Writing</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.6 </b>(118k reviews)</div>
+                    <div style="display: flex; align-items: center;"><img src="./icons/credit.jpg" height="30px" alt="credit">Credit Eligible</div>
+                    <div>Beginner &#xb7; Professional Certificate &#xb7; 3-6 Months</div>
+                  </div>
+                </div>
+            </div>
+            <div class="card web-dev">
+                <div class="image"><img class="course-img" src="./course-imgs/johns-web-dev.png" alt="John Hopkins University Web Development"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/jhu-logo.png" alt="John Hopkins University logo" height="30px">&nbsp;John Hopkins University</div>
+                  <strong>HTML, CSS & Javascript for Web Developers</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">Front-End Web Development, HTML and CSS, Javascript, Web Development</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.7 </b>(15.8k reviews)</div>
+                    <div>Mixed &#xb7; Course &#xb7; 1-3 Months</div>
+                  </div>
+                </div>
+            </div>
+            <div class="card aiml">
+                <div class="image"><img class="course-img" src="./course-imgs/ibm-applied-ai.png" alt="IBM Applied AI"></div>
+                <div class="card-content">
+                  <div style="display: flex; align-items: center;"><img class="course-logo" src="./course-imgs/ibm-logo.png" alt="IBM logo" height="30px">&nbsp;IBM</div>
+                  <strong>IBM Applied AI</strong>
+                  <br /><br />
+                  <div class="card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;"><b>Skills you'll gain:</b>
+                  <p style="display: inline;">Machine Learning, Deep Learning, Machine Learning Algorithms, Artificial Neural Networks, Computer Vision, Python Programming, Applied Machine Learning, Human Learning, Cloud Computing, IBM Cloud, Machine Learning Software, Natural Language Processing, Human Computer Interaction, Algorithms, Computer Programming, Application Development, Cloud API, Computer Programming Tools, Visualization (Computer Graphics), Cloud Applications, Data Analysis, Critical Thinking, Software As A Service, Cloud-Based Integration, Data Science</p>
+                  </div>
+                  <div class="card-bottom">
+                    <div><img src="./icons/star.avif" height="20px" alt="review"><b>4.6 </b>(46.7k reviews)</div>
+                    <div style="display: flex; align-items: center;"><img src="./icons/credit.jpg" height="30px" alt="credit">Credit Eligible</div>
+                    <div>Beginner &#xb7; Professional Certificate</div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <ul class="col">
+          <li><h2>Coursera</h2></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">What We Offer</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Catalog</a></li>
+          <li><a href="#">Coursera Plus</a></li>
+          <li><a href="#">Professional Certificates</a></li>
+          <li><a href="#">MasterTrack® Certificates</a></li>
+          <li><a href="#">Degrees</a></li>
+          <li><a href="#">For Enterprise</a></li>
+          <li><a href="#">For Government</a></li>
+          <li><a href="#">For Campus</a></li>
+          <li><a href="#">Become a Partner</a></li>
+          <li><a href="#">Coronavirus Response</a></li>
+          <li><a href="#">Social Impact</a></li>
+          <li><a href="#">Free Courses</a></li>
+          <li><a href="#">All Courses</a></li>
+          <li id="line"><br /><br /><hr /></li>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="col">
+          <li><h2>Community</h2></li>
+          <li><a href="#">Learners</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Beta Testers</a></li>
+          <li><a href="#">Translators</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Tech Blog</a></li>
+          <li><a href="#">Teaching Center</a></li>
+        </ul>
+      </div>
+
+      <div id="col-3">
+        <ul class="col">
+          <li><h2>More</h2></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Directory</a></li>
+          <li><a href="#">Affiliates</a></li>
+          <li><a href="#">Modern Slavery Statement</a></li>
+          <li><a href="#">Do Not Sell/Share</a></li>
+        </ul>
+      </div>
+
+      <div class="downloads">
+        <h5>Learn Anywhere</h5>
+        <div>
+          <a href="https://itunes.apple.com/app/apple-store/id736535961?pt=2334150&ct=Coursera%20Web%20Promo%20Banner&mt=8"><img src="./icons/app-store.png" alt="download on app-store" ></a>
+          <a href="http://play.google.com/store/apps/details?id=org.coursera.android"><img src="./icons/play-store.png" alt="download on play-store" ></a>
+        </div>
+        <img src="./icons/certified.png" alt="certified" >
+        <br /><br /><br />
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="socials">
+        <div><p>© 2023 <br />Coursera <br />Inc. All <br />rights <br />reserved.</p></div>
+        <div class="social-logos">
+          <a href="https://www.facebook.com/Coursera"><img src="./icons/facebook.svg" alt="facebook logo"></a>
+          <a href="https://www.linkedin.com/company/coursera"><img src="./icons/linkedin.svg" alt="linkedin logo"></a>
+          <a href="https://twitter.com/coursera"><img src="./icons/twitter.svg" alt="twitter logo"></a>
+          <a href="https://www.youtube.com/user/coursera"><img src="./icons/youtube.svg" alt="youtube logo"></a>
+          <a href="https://www.instagram.com/coursera/"><img src="./icons/instagram.svg" alt="instagram logo"></a>
+          <a href="https://www.tiktok.com/@coursera"><img src="./icons/tiktok.svg" alt="tiktok logo"></a>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
